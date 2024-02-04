@@ -1,0 +1,21 @@
+[package]
+name = "circom-to-acir"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ark-bn254 = { version = "^0.4.0", default-features = false, features = ["curve"] }
+ark-circom = { git = "https://github.com/arkworks-rs/circom-compat", rev = "170b10fc9ed182b5f72ecf379033dda023d0bf07" }
+ark-ff = { version = "=0.4.1", default-features = false }
+
+acvm = { git = "https://github.com/noir-lang/noir", rev = "b3ddf10a2cbb80e88821baf7d76c478c3b98b3ea" }
+noirc_abi = { git = "https://github.com/noir-lang/noir", rev = "b3ddf10a2cbb80e88821baf7d76c478c3b98b3ea" }
+noirc_errors = { git = "https://github.com/noir-lang/noir", rev = "b3ddf10a2cbb80e88821baf7d76c478c3b98b3ea" }
+nargo = { git = "https://github.com/noir-lang/noir", rev = "b3ddf10a2cbb80e88821baf7d76c478c3b98b3ea" }
+
+anyhow = "1.0.65"
+regex = "1.10.3"
+indexmap = "2.2.2"
+serde_json = "1.0"
